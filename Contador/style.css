@@ -1,0 +1,74 @@
+*,
+* ::after,
+*::before {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background-color: rgb(255, 132, 100);
+    background-image: -o-linear-gradient(to right, rgba(255, 132, 100, 1), rgba(253, 105, 165, 1));
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.card-body {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.card-body h1 {
+    margin-bottom: 15px;
+    font-size: 70px;
+}
+
+.card-btn button {
+    border-radius: 5px;
+    color: black;
+    padding: 10px 35px;
+    border: 0;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+button#Decrementar{
+    background:rgb(255, 172, 47);
+}
+
+button#Decrementar:hover{
+    background: orange;
+    color: white;
+}
+
+button#Resetar{
+    background:rgb(255, 47, 64);
+}
+
+button#Resetar:hover{
+    background: red;
+    color: white;
+    
+}
+button#Incrementar{
+    background:rgb(200, 255, 47);
+}
+
+button#Incrementar:hover{
+    background:green;
+    color: white;
+}

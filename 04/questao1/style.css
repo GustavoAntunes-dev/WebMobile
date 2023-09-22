@@ -1,0 +1,12 @@
+body {
+    background:  url("img.jpg") ;
+    background-size:auto;
+}
+    
+    h1{
+        border-color:  green;
+        border-width: 2px;
+        border-style: solid;
+        background-color: red;
+
+    }

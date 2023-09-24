@@ -4,14 +4,6 @@ const btProxima = document.getElementById("btProxima");
 let currentPage = 1;
 let numberList = 0;
 
-const calc = () => {
-  if (currentPage == 1) {
-    numberList = currentPage;
-  } else {
-    numberList = currentPage * 10 - 9;
-  }
-}
-
 const exibirLista = (lista) => {
   listaPessoas.innerHTML = "";
 

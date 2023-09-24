@@ -1,19 +1,34 @@
 const listaPessoas = document.getElementById("listaPessoas");
 const btAnterior = document.getElementById("btAnterior");
 const btProxima = document.getElementById("btProxima");
+let currentPage = 1;
+let numberList = 0;
 
-let numberAUX = 1
+const calc = () => {
+  if (currentPage == 1) {
+    numberList = currentPage;
+  } else {
+    numberList = currentPage * 10 - 9;
+  }
+}
 
 const exibirLista = (lista) => {
   listaPessoas.innerHTML = "";
+
+  if (currentPage == 1) {
+    numberList = currentPage;
+  } else {
+    numberList = currentPage * 10 - 9;
+  }
+
   for (let i = 0; i < lista.length; ++i) {
     const li = document.createElement("li");
     const text = document.createTextNode(
-      `${numberAUX}. ${lista[i].name} (${lista[i].birth_year}) (${lista[i].height} cm)`
+      `${numberList}. ${lista[i].name} (${lista[i].birth_year}) (${lista[i].height} cm)`
     );
     li.appendChild(text);
     listaPessoas.appendChild(li);
-    numberAUX++;
+    numberList++;
   }
 };
 
@@ -24,17 +39,14 @@ const configurarBotoes = (data) => {
   btAnterior.onclick = () => {
     fetchAPI(previous);
     btAnterior.disabled = true;
-    if (numberAUX > 81) {
-      numberAUX = 71;
-    } else {
-      numberAUX -= 20;
-    }
+    currentPage--;
   };
 
   btProxima.disabled = next === null;
   btProxima.onclick = () => {
     fetchAPI(next);
     btProxima.disabled = true;
+    currentPage++;
   };
 };
 

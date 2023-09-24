@@ -27,3 +27,11 @@ a:hover {
     text-decoration: none;
 }
     
+video,
+audio {
+    width: 100%;
+    max-width: 300px;
+    display: block;
+    margin: 10px auto;
+
+}

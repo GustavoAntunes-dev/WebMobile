@@ -3,13 +3,20 @@
 
 <head>
     <style>
-        .myDiv1 {
-            font-family: Arial;
+        .texto {
+            text-decoration: underline;
+            font-family: Arial, Helvetica, sans-serif;
+
+
 
         }
 
-        .myDiv2 {
+        p .Hiperlinks {
+            font-weight: bold;
+            text-decoration: none;
             font-family: 'Times New Roman', Times, serif;
+            stroke: black;
+
         }
     </style>
     <meta charset="UTF-8">
@@ -18,16 +25,16 @@
 </head>
 
 <body>
-    <div class="myDiv1">
-        <p><u>PARAGRAFO QUALQUER COM DOIS HYPERLINKS, aqui sublinhado e fonte Arial,
-            HYPERLINKS negrito, não sublinhado e fonte Times New Roman.
-        </u></p>
-    </div>
-    <div class="myDiv2">
-        <b><a style="text-decoration: none" href="https://www.w3schools.com/">w3schools</a></b>
-        <br></b>
-        <b><a style="text-decoration: none" href="https://www.google.com/">Google</a></b>
-    </div>
+
+    <p>
+        <u class="texto">PARAGRAFO QUALQUER COM DOIS HYPERLINKS, aqui sublinhado e fonte Arial, 
+            ferramenta de busca : </u><u style="text-decoration: none;" class="Hiperlink">
+        <a style="text-decoration: none" href="https://www.google.com/"><b> Google </b></a></u><u class="texto">
+            HYPERLINKS negrito, site para aprender: </u><u style="text-decoration: none;" class="Hiperlink"><a style="text-decoration: none"
+                    href="https://www.w3schools.com/"><b> w3schools </b></a></u> <u>não sublinhado e fonte Times New Roman.
+        </u>
+    </p>
+
 </body>
 
 </html>
